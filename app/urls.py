@@ -1,0 +1,8 @@
+from django.urls import path 
+from . import views
+
+urlpatterns = [
+    path("" , views.home , name='home'),
+    path("download/" , views.download_setion , name='download'),
+    path('download/<int:itag>/', views.download_stream, name='download_stream'),
+]

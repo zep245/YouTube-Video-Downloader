@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--
+  Heads up! 👋
+
+  Plugins:
+    - @tailwindcss/forms
+-->
+
+<div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-lg text-center">
+      <h1 class="text-2xl font-bold sm:text-3xl">Download Your Favourite Youtube Videos for Free</h1>
+    </div>
+  
+    <form action="" method="POST" class="mx-auto mb-0 mt-8 max-w-md space-y-4">
+    {% csrf_token %}
+      <div>
+        <label for="url" class="sr-only">Url</label>
+  
+        <div class="relative">
+          <input
+            name="url"
+            type="text"
+            class="w-full rounded-lg border-2 outline-none p-4 pe-12 text-sm shadow-sm"
+            placeholder="Enter YouTube link"
+          />
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <button
+          type="submit"
+          class="w-full rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+        >
+          Download
+        </button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
