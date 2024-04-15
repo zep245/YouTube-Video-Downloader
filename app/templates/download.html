@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="flex justify-center">
+        <div>
+            <img src="{{ thumbnail }}" alt="">
+        </div>
+    </div>
+    <div class="flex justify-center mt-4">
+        <div>
+            <h1 class="text-3xl">{{ title }}</h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+    <p>Here are two different ways to download this link:</p>
+    <div class="my-8">
+        <h1 class="text-xl font-bold">Normal Video HD</h1>
+
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 font-medium text-gray-900">Quality</th>
+                        <th class="px-4 py-2 font-medium text-gray-900">Format</th>
+                        <th class="px-4 py-2 font-medium text-gray-900">Download</th>
+                    </tr>
+                </thead>
+            
+                <tbody class="divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-4 py-2 text-center text-gray-900">720</td>
+                        <td class="px-4 py-2 text-center text-gray-700">MP4</td>
+                        <td class="px-4 py-2 text-center text-gray-700"><a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="button" download href="{{ stream_720p.url }}">Download</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="my-8">
+        <h1 class="text-xl font-bold">Normal Video</h1>
+
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 font-medium text-gray-900">Quality</th>
+                        <th class="px-4 py-2 font-medium text-gray-900">Format</th>
+                        <th class="px-4 py-2 font-medium text-gray-900">Download</th>
+                    </tr>
+                </thead>
+            
+                <tbody class="divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-4 py-2 text-center text-gray-900">360</td>
+                        <td class="px-4 py-2 text-center text-gray-700">MP4</td>
+                        <td class="px-4 py-2 text-center text-gray-700"><a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="button" download href="{{ stream_360p.url }}">Download</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
